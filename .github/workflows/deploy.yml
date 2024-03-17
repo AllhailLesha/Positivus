@@ -37,6 +37,8 @@ jobs:
           cache: 'npm'
       - name: Install dependencies
         run: npm ci
+      name: Copy scss files
+      run: cp  src/styles/styles.scss dist/      # Пример копирования файлов стилей в директорию 'dist/'
       - name: Build
         run: npm run build
       - name: Setup Pages
